@@ -128,12 +128,14 @@ export default function MemoryGame() {
   return (
     <div className="text-center w-full flex flex-col max-w-screen">
       {gameOver && (
-        <Confetti
-          width={width}
-          height={height}
-          numberOfPieces={300}
-          recycle={false}
-        />
+        <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
+          <Confetti
+            width={width}
+            height={height}
+            numberOfPieces={300}
+            recycle={false}
+          />
+        </div>
       )}
       <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-500 to-purple-700 p-2">
         Memory Game
